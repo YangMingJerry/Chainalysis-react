@@ -1,4 +1,5 @@
 apt install python3-pip
+apt install python3.8-venv
 apt install npm
 cd backend-py/
 source venv/bin/activate
