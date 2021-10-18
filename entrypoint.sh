@@ -1,3 +1,5 @@
+apt install python3-pip
+apt install npm
 cd backend-py/
 source venv/bin/activate
 python3 -m pip install --upgrade pip
