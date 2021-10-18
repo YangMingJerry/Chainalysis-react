@@ -87,9 +87,13 @@ class Handler:
         path_recom = './data/recom.json'
         coinbase = Coinbase()
         kraken = Kraken()
-        while True:
-            time.sleep(0.5)
-            self.refresh(path,path_recom,coinbase, kraken)
+        try:
+            while True:
+                time.sleep(0.5)
+                self.refresh(path,path_recom,coinbase, kraken)
+        except KeyboardInterrupt:
+            print('interrupted!')
+
 
     def recommend(self,out):
         ecurr_list = ['ETH','BTC']

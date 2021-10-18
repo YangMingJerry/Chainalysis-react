@@ -2,21 +2,21 @@
       "ETH": {
             "bestbuy": [
                   "kraken",
-                  "3826.16"
+                  "3729.86"
             ],
             "bestsell": [
                   "coinbase",
-                  "3846.58"
+                  "3748.21"
             ]
       },
       "BTC": {
             "bestbuy": [
                   "kraken",
-                  "61348.8"
+                  "61319.0"
             ],
             "bestsell": [
                   "coinbase",
-                  "61677.0"
+                  "61654.41"
             ]
       }
 }
