@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./../App.css";
 
 
 export class Dynamicrecomm extends Component {
@@ -19,7 +20,17 @@ export class Dynamicrecomm extends Component {
     getData = () => {
         axios.get('http://localhost:8000/recommend')
         .then(response => {
-            this.setState({ post: response.data })
+            this.setState({
+                btc_best_buy:            response.data.BTC.bestbuy[0],
+                btc_best_buy_price:      response.data.BTC.bestbuy[1],
+                btc_best_sell:           response.data.BTC.bestsell[0],
+                btc_best_sell_price:     response.data.BTC.bestsell[1],
+                eth_best_buy:            response.data.ETH.bestbuy[0],
+                eth_best_buy_price:      response.data.ETH.bestbuy[1],
+                eth_best_sell:           response.data.ETH.bestsell[0],
+                eth_best_sell_price:     response.data.ETH.bestsell[1],
+
+            })
             console.log(response)
         })
             
@@ -28,12 +39,41 @@ export class Dynamicrecomm extends Component {
         })
     }
     render() {
-        const { post } = this.state;
+        const{btc_best_buy         } = this.state
+        const{btc_best_buy_price   } = this.state
+        const{btc_best_sell        } = this.state
+        const{btc_best_sell_price  } = this.state
+        const{eth_best_buy         } = this.state
+        const{eth_best_buy_price   } = this.state
+        const{eth_best_sell         } = this.state
+        const{eth_best_sell_price   } = this.state
         return (
-            <div>
-                dynamic recommendation:
-                {JSON.stringify(post)}
+            <div className="reccomendation container">
+              <ul className="reccomendation list">
+                <li>{<span className="recText">The best sell for BTC is with</span>}
+                {btc_best_sell} :
+                {btc_best_sell_price}
+                </li>
+                  <li>{<span className="recText">The best buy for BTC is with</span>}
+                {btc_best_buy} :
+                {btc_best_buy_price}
+                </li>
+                  </ul>
+                <ul className="reccomendation list">
+                <li>{<span className="recText">The best sell for ETH is with</span>}
+                {eth_best_sell} :
+                {eth_best_sell_price}
+                </li>
+                  </ul>
+                <ul className="reccomendation list">
+                <li>{<span className="recText">The best buy for ETH is with</span>}
+                {eth_best_buy} :
+                {eth_best_buy_price}
+                </li>
+                  </ul>
             </div>
+
+
         )
     }
 }

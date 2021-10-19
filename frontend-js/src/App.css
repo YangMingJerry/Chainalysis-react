@@ -1,38 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
+  height: 90vh; 
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.currencyLogo {
+  width: 200px;
+  height: auto;
+  margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exchangeLogo {
+  width: 200px;
+  height: auto;
+  margin: 5px 0;
+}
+
+.exchangeLogo.small {
+  width: 100px;
+  height: auto;
+  margin: auto 0 auto 60px;
+}
+
+.outer.price.container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+
+.btc.price.container, .eth.price.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.flex.col {
+  display: flex;
+  flex-direction: column;
+}
+
+span.price {
+  flex-direction: row;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.kraken.price, .coinbase.price {
+    font-size: 30px;
+  width: 100%;
+}
+
+.price.inner.container {
+  display: flex;
+  margin: auto;
+
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reccomendation.list {
+  list-style: none;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px 0;
+  padding-left: 0px;
+  align-items: flex-start;
+
+}
+
+.list > li {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+.reccomendation.container {
+  width: 100%;
 }
