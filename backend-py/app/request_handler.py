@@ -101,7 +101,7 @@ class Handler:
         for ecurr in ecurr_list:
             recom[ecurr] = {}
             buys = [(trader,value.get(ecurr).get('buy')) for trader, value in out.items()]
-            sells = [(trader, value.get(ecurr).get('buy')) for trader, value in out.items()]
+            sells = [(trader, value.get(ecurr).get('sell')) for trader, value in out.items()]
             recom[ecurr]['bestbuy'] = sorted(buys, key=lambda buy: buys[1])[0]
             recom[ecurr]['bestsell'] = sorted(sells, key=lambda sell: sells[1])[-1]
         return recom
