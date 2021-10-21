@@ -8,5 +8,5 @@ pip install -r requirements.txt
 . entrypoint.sh &
 cd ../frontend-js
 npm install
-npm npm start
+npm start
 

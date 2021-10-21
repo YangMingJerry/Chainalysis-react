@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./../App.css";
-
+import {ReactComponent as BitcoinLogo} from "../assets/BitcoinLogo.svg";
+import { ReactComponent as EthereumLogo } from "./../assets/EthereumLogo.svg"
 
 export class Dynamicrecomm extends Component {
     constructor(props) {
@@ -48,32 +49,51 @@ export class Dynamicrecomm extends Component {
         const{eth_best_sell         } = this.state
         const{eth_best_sell_price   } = this.state
         return (
-            <div className="reccomendation container">
+            // <div className="App">
+            <div className="outer price container">
+                <div className="reccomendation container">
               <ul className="reccomendation list">
-                <li>{<span className="recText">The best sell for BTC is with</span>}
-                {btc_best_sell} :
-                {btc_best_sell_price}
+                <div className="reccomendation curr container">
+                    <div className="reccomendation curr inner container">
+
+                        <li><li className="subhead">BEST BUY:</li>
+                            <li>{btc_best_buy} :{btc_best_buy_price}</li>
+                        </li></div>
+
+                    <div className="reccomendation curr inner container">
+
+                        <li><li className="subhead">BEST SELL:</li>
+                            <div className="flex col">
+                                <span >{btc_best_sell} :{btc_best_sell_price}</span>
+
+                            </div>
                 </li>
-                  <li>{<span className="recText">The best buy for BTC is with</span>}
-                {btc_best_buy} :
-                {btc_best_buy_price}
-                </li>
+                    </div>
+                </div>
                   </ul>
+                </div>
+
+            <div className="reccomendation container">
                 <ul className="reccomendation list">
-                <li>{<span className="recText">The best sell for ETH is with</span>}
-                {eth_best_sell} :
-                {eth_best_sell_price}
-                </li>
-                  </ul>
-                <ul className="reccomendation list">
-                <li>{<span className="recText">The best buy for ETH is with</span>}
-                {eth_best_buy} :
-                {eth_best_buy_price}
-                </li>
-                  </ul>
+                <div className="reccomendation curr container">
+                    <div className="reccomendation curr inner container">
+
+                        <li><li className="subhead">BEST BUY:</li>
+                            <li>{eth_best_sell} :{eth_best_sell_price}</li>
+                        </li>
+                    </div>
+
+                    <div className="reccomendation curr inner container">
+
+                        <li><li className="subhead">BEST SELL:</li>
+                            <li>{eth_best_buy} :{eth_best_buy_price}</li>
+                        </li>
+                    </div>
+                </div>
+
+              </ul>
             </div>
-
-
+        </div>
         )
     }
 }

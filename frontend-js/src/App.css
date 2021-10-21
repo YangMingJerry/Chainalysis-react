@@ -1,22 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .App {
+
+  font-family: Sans-Serif;
+  font-weight: normal;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffffff;
   color: #000000;
-  height: 90vh; 
+    height: 90vh;
 }
 
-
+.headLine{
+  background-color: #ffffaa;
+  color: #000000;
+  height: auto;
+  font-size: 45px;
+    font-weight: 700;
+  text-align: center;
+}
 
 .currencyLogo {
-  width: 200px;
+  width: 400px;
   height: auto;
   margin: 5px 0;
+}
+.currencyLogoSmall{
+  width: 200px;
+  height: auto;
+  margin: -20px;
 }
 
 .exchangeLogo {
@@ -28,23 +42,25 @@
 .exchangeLogo.small {
   width: 100px;
   height: auto;
-  margin: auto 0 auto 60px;
+  margin: auto 90px;
+
 }
 
 .outer.price.container {
   display: flex;
-  margin: auto;
+  margin: 0;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100%;
+    height: 90vh;
+
   width: 80%;
 }
 
 .btc.price.container, .eth.price.container {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 
@@ -58,7 +74,6 @@
 span.price {
   flex-direction: row;
   margin: 10px 0;
-  font-weight: 700;
   font-size: 18px;
 }
 
@@ -69,7 +84,7 @@ span.price {
 
 .price.inner.container {
   display: flex;
-  margin: auto;
+  margin: 0;
 
   flex-direction: row;
   justify-content: space-between;
@@ -77,22 +92,40 @@ span.price {
 
 .reccomendation.list {
   list-style: none;
-  font-weight: 700;
   font-size: 30px;
   margin: 10px 0;
-  padding-left: 0px;
   align-items: flex-start;
 
 }
+.subhead{
+  font-weight: 600;
+  height: 6vh;
+}
+/*.list > li {*/
+/*  margin: 25px auto;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  align-items: center;*/
+/*  justify-content: space-evenly;*/
 
-.list > li {
-  margin: 25px auto;
-  display: flex;
-  flex-direction: row;
+/*}*/
+.reccomendation.container {
+  width: 80%;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.reccomendation.curr.container{
+    width: 100%;
   justify-content: space-evenly;
 
+    display: flex;
+
 }
-.reccomendation.container {
-  width: 100%;
+.reccomendation.curr.inner.container{
+      display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+    width: 100%;
+
 }

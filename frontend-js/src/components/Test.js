@@ -7,7 +7,7 @@ import KrakenLogo from "./../assets/KrakenLogo.png"
 import "./../App.css";
 
 export class
-Dynamicprice extends Component {
+Test extends Component {
     constructor(props) {
         super(props)
         this.state = {}
@@ -37,7 +37,7 @@ Dynamicprice extends Component {
                 })
             console.log(response)
         })
-            
+
         .catch(error => {
             console.log(error)
         })
@@ -56,9 +56,6 @@ Dynamicprice extends Component {
         console.log(btc_kraken_buy > btc_kraken_sell)
 
         return (
-        <div>
-            <div className="price">
-
         <div className="outer price container">
 
           <div className="btc price container">
@@ -67,12 +64,12 @@ Dynamicprice extends Component {
               <div className="coinbase btc price">
               <CoinbaseLogo className="exchangeLogo"/>
                 <div className="flex col">
-                  <div className="coinbase btc price buy">
+                  <span className="coinbase btc price buy">
                       buy: {btc_coinbase_buy}
-                  </div>
-                  <div className="coinbase btc price sell">
+                  </span>
+                  <span className="coinbase btc price sell">
                       sell: {btc_coinbase_sell}
-                  </div>
+                  </span>
                 </div>
               </div>
               <div className="kraken btc price">
@@ -82,7 +79,7 @@ Dynamicprice extends Component {
                     buy: {btc_kraken_buy}
                   </span>
                   <span className="kraken btc price sell">
-                    buy: {btc_kraken_sell}
+                    sell: {btc_kraken_sell}
                   </span>
                 </div>
               </div>
@@ -116,9 +113,7 @@ Dynamicprice extends Component {
             </div>
           </div>
         </div>
-    </div>
-        </div>
         );
     }
     }
-export default Dynamicprice
+export default Test
