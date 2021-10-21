@@ -2,5 +2,4 @@
 
 Demo of final web page:
 
-
-![DEMO]('data/demo.png')
+![demo](./data/demo.jpg)
