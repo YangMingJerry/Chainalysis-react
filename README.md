@@ -12,6 +12,6 @@ instructions:
 
 1. clone this repository
 2. run this in your terminal
-    '''
+    ''' shell
       . entrypoint.sh
     '''
