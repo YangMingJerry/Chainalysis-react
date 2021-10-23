@@ -11,7 +11,7 @@ requirements: Linux
 instructions:
 
 1. clone this repository
-2. 
-'''
-  . entrypoint.sh
-'''
+2. run this in your terminal
+    '''
+      . entrypoint.sh
+    '''
