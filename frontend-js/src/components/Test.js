@@ -22,7 +22,7 @@ Test extends Component {
     }
 
     getData = () => {
-        axios.get('http://159.65.243.247:8000/prices')
+        axios.get('http://127.0.0.1:8000/prices')
         .then(response => {
             this.setState({
                 btc_kraken_buy:    response.data.kraken.BTC.buy,
